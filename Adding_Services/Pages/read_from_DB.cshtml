@@ -1,0 +1,21 @@
+﻿@page
+@model Adding_Services.Pages.read_from_DBModel
+@{
+}
+
+<div class="card-columns">
+    @foreach (var item in Model.Products)
+    {
+        <div class="card">
+            <div class="card-img" style=" background-image : url(' @Html.DisplayFor(modelItem => item.Image)');"></div>
+            <div class="card-body">
+                @Html.DisplayFor(modelItem => item.Id)<br>
+                @Html.DisplayFor(modelItem => item.Maker)<br>
+                @Html.DisplayFor(modelItem => item.Url)<br>
+                @Html.DisplayFor(modelItem => item.Title)<br>
+                @Html.DisplayFor(modelItem => item.Description)
+            </div>
+        </div>
+            }
+</div>
+       
